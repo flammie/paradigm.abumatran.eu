@@ -1,0 +1,49 @@
+** Paradigm Annotation Tool **
+
+INSTALLATION INSTRUCTIONS
+
+Software requirements
+--------------------
+
+You will need Python, Apache 2, PHP 5 and a MySql database client and server with the following additional modules: php5-mysql, python-webpy, python-mysqldb (Ubuntu packages)
+
+
+Database initialization
+-----------------------
+
+Enter MySql console and execute the following commands in order to create the database and the user for the paradigm annotation tool:
+
+create database paradigm;
+GRANT ALL ON paradigm.* TO 'paradigm_admin'@'%' IDENTIFIED BY 'paradigmadmin';
+
+Then import the dump included in the package (this example assumes your MySql user is root and there is no password):
+
+mysql -u root -p paradigm  < paradigm_database_dump_nodata.sql
+
+This will initialize an empty database with the required structure.
+
+
+Apache website configuration
+----------------------------
+
+Copy the directory paradigm.abumatran.eu to /var/www/. Then, copy the file 009-paradigm.abumatran.eu.conf to /etc/apache2/sites-enabled. In order to test that everything works, you can edit the file /etc/hosts to make your system redirect paradigm.abumatran.eu to localhost.
+
+
+Running the system
+--------------------
+
+Finally, initialize the python servers with the following commands:
+
+paradigm/server/user/run.py 59999 &> /home/rafa/paradigm/server/user/logserver &
+paradigm/server/task/run.py 59998 &> /home/rafa/paradigm/server/task/logserver &
+
+
+Adding users and tasks
+----------------------
+
+You can insert new tasks from Json files (a Json sample is included) with the python script parseJsonForMysql.simpleJson.py
+
+Then you can create users and assign them to tasks from paradigm.abumatran.eu/admin/. Administration section users are defined in /var/www/paradigm.abumatran.eu/admin/.htpasswd. Once you have created the desired users, you can start annotating by goinf to paradigm.abumatran.eu.
+
+
+

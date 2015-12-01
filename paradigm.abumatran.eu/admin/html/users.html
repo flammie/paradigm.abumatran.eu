@@ -1,0 +1,44 @@
+<div id="add_user_msg" class="server_msg"></div>
+
+<article id="add_user">
+<form class="pure-form pure-form-aligned" id="form_add_user">
+	<fieldset>
+		<legend>Add User</legend>
+		<div class="pure-control-group">
+	                <label for="name">Username</label>
+        	        <input id="name" type="text" name="name" placeholder="Username" required>
+		</div>
+
+		<div class="pure-control-group">
+	                <label for="pwd">Password</label>
+        	        <input id="pwd" type="password" name="pwd" placeholder="Password" required>
+		</div>
+
+		<div class="pure-control-group">
+			<label for="email">Email</label>
+			<input id="email" type="email" name="email" placeholder="Email">
+		</div>
+
+		<div class="pure-control-group">
+			<label for="lang">Language(s)</label>
+			<select id="lang" name="lang[]" multiple="multiple">
+			</select>
+		</div>
+
+		<button type="submit" class="button-large pure-button pure-button-active" form="form_add_user">Validate User</button>
+	</fieldset>
+</form>
+</article>
+
+<article id="mng_users">
+        <form class="pure-form" id="form_mng_users">
+                <fieldset>
+                        <legend>Manage Users</legend>
+                        <div id="listusers" class="pure-control-group">
+                                <table id="table_listusers">
+                                </table>
+                        </div>
+                </fieldset>
+        </form>
+</article>
+

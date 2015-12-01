@@ -1,0 +1,73 @@
+<div id="add_language_msg" class="server_msg"></div>
+
+<article id="add_language">
+<form class="pure-form pure-form-aligned" id="form_add_language">
+        <fieldset>
+                <legend>Add Language</legend>
+                <div class="pure-control-group">
+                        <label for="shortname">ISO 639-1 (en, fr, &hellip;)</label>
+                        <input id="shortname" type="text" name="shortname" placeholder="ISO 639-1" required />
+                </div>
+
+                <div class="pure-control-group">
+                        <label for="longname">Language Name</label>
+                        <input id="longname" type="text" name="longname" placeholder="Name" required />
+                </div>
+
+                <button type="submit" class="button-large pure-button pure-button-active" form="form_add_language">Validate Language</button>
+
+		<br />
+
+		<div id="link_addfeatures">+ Add more features</div>
+		
+		<div id="wrap_addfeatures">
+
+			<div class="pure-control-group">
+				<label for="addtype">Category</label>
+        			<input id="addtype" type="text" name="addtype" placeholder="Add Category" />
+				<button id="button_addtype" type="button" class="pure-button">+</button>
+		        </div>
+        	
+			<div id="specific_type_wrap" class="pure-control-group">
+				<ul id="list_specific_pos">
+					<li id="specific_type_noun">Noun</li>
+					<li id="specific_type_verb">Verb</li>
+	                                <li id="specific_type_adjective">Adj.</li>
+				</ul>
+        		        <div id="specific_type"></div>
+	        	</div>
+
+        	        <hr class="light">
+
+                	<div class="pure-control-group">
+                        	<label for="addflag">Flag</label>
+	                        <input id="addflag" type="text" name="addflag" placeholder="Add Flag" />
+        	                <button id="button_addflag" type="button" class="pure-button">+</button>
+                	</div>
+
+	                <div id="flag_wrap" class="pure-control-group">
+        	                <ul id="list_flag_pos">
+                	                <li id="flag_noun">Noun</li>
+                        	        <li id="flag_verb">Verb</li>
+                                	<li id="flag_adjective">Adj.</li>
+	                        </ul>
+        	                <div id="flag"></div>
+	                </div>
+		</div>
+	
+        </fieldset>
+</form>
+</article>
+
+<article id="mng_languages">
+        <form class="pure-form" id="form_mng_languages">
+                <fieldset>
+                        <legend>Manage Languages</legend>
+                        <div id="listlanguages" class="pure-control-group">
+                                <table id="table_listlanguages">
+                                </table>
+                        </div>
+                </fieldset>
+        </form>
+</article>
+
