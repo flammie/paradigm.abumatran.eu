@@ -1,0 +1,487 @@
+a, div, h1, h2, span, ul, li{
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-decoration: none;
+        color: #000;
+        list-style: none;
+}
+
+header, nav, footer, main {
+        width: 85%;
+        margin: 0px auto;
+        padding: 0px;
+        text-align: center;
+}
+
+footer{
+	clear: both;
+	height: 10px;
+	background: #f9f9f9;
+	vertical-align: bottom;
+}
+
+header a, header h1 {
+        display: inline-block;
+        margin: 20px 10px;
+}
+
+div.login_msg{
+	text-align: center;
+	color: #f00;
+	font-weight: bold;
+}
+
+/*#### 
+##### Spinning stuff when loading ###
+### */
+div#loading{
+	height: 75px;
+	width: 75px;
+	background-image: url( "load.gif" );
+	position: fixed;
+	top: 44%;
+	left: 44%;
+	z-index: 98;
+}
+
+#overlay {
+	background-color: #111;
+	background: linear-gradient( 180deg, #000 );
+	opacity: 0.5;
+	z-index: 99;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+div#toolbar{
+	display: none;
+        width: 98%;
+        margin: 0 auto;
+        padding: 2px;
+        height: 30px;
+        text-align: right;
+}
+
+div#languagepicker{
+        font-size: 12px;
+        display: inline-block;
+	padding: 2px;
+}
+
+a#logout{
+	display: inline-block;
+        background: #f11;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: white;
+}
+
+a#logout:hover{
+        background: #f00;
+        color: #000;
+}
+
+
+/*#########
+
+*/
+
+nav {
+	text-align: left;
+	clear: both;
+	vertical-align: bottom;
+}
+
+nav a{
+        transition-property: background, color, border;
+        transition-duration: 150ms;
+        transition-timing-function: linear;
+        transition-delay: 1ms;
+}
+
+nav ul#menu_general{
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+nav ul#menu_general li{
+        display: inline-block;
+	border-right: 2px #fafafa solid;
+}
+
+a.navmenu{
+	display: inline-block;
+        padding: 15px 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        background: #eee;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+a#noun:hover{
+        color: #fff;
+        background: #00aa9b;
+}
+
+body#noun a#noun{
+        background: #00aa9b;
+        color: #eee;
+        cursor: default;
+}
+
+a#verb:hover {
+        color: #fff;
+        background: #008087;
+}
+
+body#verb a#verb{
+        background: #008087;
+        color: #eee;
+        cursor: default;
+}
+
+a#adjective:hover{
+        color: #fff;
+        background: #005c7e;
+}
+
+body#adjective a#adjective{
+        background: #005c7e;
+        color: #eee;
+        cursor: default;
+}
+
+a#overview:hover {
+        color: #fff;
+        background: #00cbbc;
+}
+
+body#overview a#overview{
+        background: #00cbbc;
+        color: #eee;
+	cursor: default;
+}
+
+body#history a#back{
+	padding-right: 10px;
+}
+
+body#history a#history{
+	background: #00cbbc;
+	color: #fff;
+}
+
+body#history a#history:hover{
+        background: #005c7e;
+}
+
+body#history main{
+	border: 1px #00cbbc solid;
+}
+
+main{
+	background: #fefefe;
+}
+
+div#msg_server{
+        background-color: #1e5;
+        font-weight: bold;
+        padding: 5px;
+}
+
+article{
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+article#surface_form{
+	display: inline-block;
+	width: 52%;
+	text-align: center;
+	vertical-align: top;
+	box-shadow: 0px 2px 3px #aaa;
+	float: left;
+}
+
+body#noun article#surface_form{
+        background: #00aa9b;
+}
+
+body#verb article#surface_form{
+	background: #008087;
+}
+
+body#adjective article#surface_form{
+        background: #005c7e;
+}
+
+article.overview_welcome{
+        background: #00cbbc;
+}
+
+article#overview_info{
+	float: left;
+	text-align: justify;
+	width: 50%;
+	display: inline-block;
+	padding: 3%;
+}
+
+article#history, article#counter{
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+}
+
+article#history legend, article#counter legend{
+	color: #555;
+	font-weight: bold;
+}
+
+ul#list_history, ul#list_stats{
+	padding: 2%;
+	text-align: left;
+	box-shadow: 0px 1px 1px #fafafa;
+}
+
+ul#list_history li{
+	cursor: pointer;
+	border: 2px #fefefe solid;
+	padding-left: 2%;
+        transition-property: border, background;
+        transition-duration: 150ms;
+        transition-timing-function: linear;
+}
+
+ul#list_history li:hover{
+	background: #f9f9f9;
+	border-right: 2px #00cbbc solid;
+	border-left: 2px #00cbbc solid;
+}
+
+ul#list_stats span.langname{
+	display: inline-block;
+	width: 100%;
+	text-align: center;	
+	font-weight: bold;
+}
+
+ul#list_stats span.posname, ul#list_stats span.poscount{
+        display: inline-block;
+	text-align: left;
+        width: 40%;
+}
+
+article#overview_tasks_details{
+	width: 55%;
+	display: inline-block;
+	border: 2px #f0f0f0 double;
+	background: #fdfdfd;	
+}
+
+article#overview_tasks_details div{
+	text-align: left;
+	padding: 1%;
+	margin: 1%;
+	display: inline-block;
+	width: 28%;
+}
+
+article#overview_tasks_details div legend{
+	font-weight: bold;
+}
+
+article#overview_tasks_details span.label{
+}
+
+article#overview_tasks_details span.value{
+	float: right;
+}
+
+article#overview_users{
+        width: 40%;
+        display: inline-block;
+        border: 2px #f0f0f0 double;
+	background: #fdfdfd;
+}
+
+article#surface_form span{
+	color: #fff;
+	text-shadow: 2px 1px 4px #222;
+	font-weight: bold;
+        font-size: 32px;
+}
+
+article#surface_form i{
+        color: #ddd;
+}
+
+article#validate_category{
+	display: inline-block;
+	font-size: 14px;
+	background: #f9f9f9;
+	vertical-align: top;
+	float: left;
+	margin-left: 1%;
+}
+
+article#specific_type{
+	display: inline-block;
+	width: 30%;
+	text-align: left;
+}
+
+article#specific_type ul{
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+	column-count: 2;
+	column-gap: 20px;
+}
+
+
+article#button_set{
+	background: #fafafa;
+	padding: 10px;
+	border: 2px #f7f7f7 solid;	
+	text-align: left;
+	height: 35px;
+}
+
+article#button_set button{
+	display: inline-block;
+	width: 14%;
+	font-size: 16px;
+}
+
+
+article#button_set button#button_previous{
+}
+
+article#button_set button#button_next{
+	float: right;
+}
+
+
+div.display_box{
+	display: inline-block;
+	background: #fff;
+	border: 1px #ddd solid;
+	width: 30%;
+	text-align: left;
+	vertical-align: top;
+	margin: 1%;
+	border-radius: 4px;
+	transition-property: border, box-shadow, background;
+        transition-duration: 150ms;
+        transition-timing-function: linear;
+}
+
+div.display_box:hover{
+        background: linear-gradient( 140deg, #fff, #fdfdfd );
+        border: 1px #ddd solid;
+	linear-gradient(to right, red , blue);
+	box-shadow: 1px 0px 1px #ddd;
+}
+
+body#noun div.display_box:hover{
+	box-shadow: 0px 1px 2px #00aa9b;
+}
+
+body#verb div.display_box:hover{
+        box-shadow: 0px 1px 2px #008087;
+}
+
+body#adjective div.display_box:hover{
+        box-shadow: 0px 1px 2px #005c7e;
+}
+
+div.display_box_checked{
+        background: #fbfbfb;
+	border: 1px #aaa solid;
+	box-shadow: 1px 1px 1px #ddd;
+}
+
+div.display_box_checked:hover{
+	background: linear-gradient( 140deg, #fbfbfb, #f9f9f9 );
+        border: 1px #ddd solid;
+        cursor: pointer;
+        linear-gradient(to right, red , blue);
+        box-shadow: 1px 1px 2px #ddd;
+}
+
+div.wraplemma {
+	padding: 2%;
+        color: #111;
+        background: #ddd;
+	cursor: pointer;
+}
+
+article#validate_lemma_paradigm span{
+	vertical-align: middle;
+	display: inline-block;
+	padding: 2%;
+}
+
+span.display_lemma{
+	font-weight: bold;
+	color: #111;
+	font-size: 22px;
+}
+
+span.display_paradigm{
+        color: #444;
+        font-size: 16px;
+}
+
+div.display_expanded{
+	font-size: 14px;
+	display: block;
+	text-align: center;
+}
+
+article#validate_lemma_paradigm div.display_expanded span.expanded_lemma{
+        font-size: 14px;
+        display: inline-block;
+	text-align: left;
+	width: 45%;
+	padding: 0.5%;
+}
+
+article#validate_lemma_paradigm div.display_expanded span.expanded_paradigm{
+        font-size: 14px;
+        display: inline-block;
+	text-align: left;
+	width: 45%;
+	padding: 0.5%;
+}
+
+article#validate_lemma_paradigm div input.validate_candidate{
+	display: inline-block;
+	cursor: pointer;
+	margin: 1%;
+}
+
+/*### 
+	HISTORY PAGE
+*/
+
+div#display_contenthistory table{
+        width: 100%;
+}
+
+div#display_contenthistory td, div#display_contenthistory th{
+	padding: 1%;
+}
+
+div#display_contenthistory table tr:nth-child( even ){
+	background: #fafafa;
+}

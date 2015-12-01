@@ -1,0 +1,34 @@
+<div id="export_msg" class="server_msg"></div>
+
+<article id="manage_task">
+        <form class="pure-form" id="form_manage_task">
+                <fieldset>
+                        <legend>Tasks</legend>
+			<div id="listalltasks"></div>
+                </fieldset>
+        </form>
+</article>
+
+<article id="manage_format">
+	 <form class="pure-form">
+                <fieldset>
+			<legend>Select a format</legend>
+			<div class="pure-control-group">
+				<label for="json" class="pure-radio">
+					<input id="json" type="radio" name="format_export" value="json" required />
+					JSON
+				</label>
+				<label for="apertiumdix" class="pure-radio">
+                                        <input id="apertiumdix" type="radio" name="format_export" value="apertiumdix" required />
+                                        Apertium dix
+                                </label>
+			</div>
+                </fieldset>
+        </form>
+
+	<button class="pure-button" type="submit" name="button_export" id="button_export">Export</button>
+
+	<div id="export_link"></div>
+</article>
+
+
